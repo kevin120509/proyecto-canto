@@ -1,0 +1,134 @@
+{
+    "users": {
+        "kevin": {
+            "password": "scrypt:32768:8:1$SWbXQ8QmA0rurKxz$2f482f2683fca8135e3d6edc8e898ee1ecd2e6e791daaa240d4bd0d598e04d739f97acee82165c08469707f5b59d5c89c9ecaf2b537b4aecb69624651f2d0acd",
+            "email": "kevin.36137@gmail.com",
+            "name": "kevin aaron vargas guzman",
+            "created_at": "2025-03-17T20:22:49.716940"
+        }
+    },
+    "finances": {
+        "kevin": [
+            {
+                "type": "income",
+                "category": "salario",
+                "amount": 1500.0,
+                "description": "del trabajo",
+                "date": "2025-03-17"
+            },
+            {
+                "type": "expense",
+                "category": "alimentaci\u00f3n",
+                "amount": 1400.0,
+                "description": "del trabajo",
+                "date": "2025-03-17"
+            }
+        ]
+    },
+    "budgets": {
+        "kevin": {}
+    },
+    "goals": {
+        "kevin": []
+    },
+    "categories": {
+        "kevin": [
+            {
+                "name": "Freelance",
+                "type": "income"
+            },
+            {
+                "name": "Dividendos",
+                "type": "income"
+            },
+            {
+                "name": "Intereses",
+                "type": "income"
+            },
+            {
+                "name": "Regal\u00edas",
+                "type": "income"
+            },
+            {
+                "name": "Reembolsos",
+                "type": "income"
+            },
+            {
+                "name": "Alquiler",
+                "type": "income"
+            },
+            {
+                "name": "Regalos",
+                "type": "income"
+            },
+            {
+                "name": "Otros Ingresos",
+                "type": "income"
+            },
+            {
+                "name": "Alimentaci\u00f3n",
+                "type": "expense"
+            },
+            {
+                "name": "Transporte",
+                "type": "expense"
+            },
+            {
+                "name": "Servicios",
+                "type": "expense"
+            },
+            {
+                "name": "Entretenimiento",
+                "type": "expense"
+            },
+            {
+                "name": "Salud",
+                "type": "expense"
+            },
+            {
+                "name": "Educaci\u00f3n",
+                "type": "expense"
+            },
+            {
+                "name": "Ahorros",
+                "type": "expense"
+            },
+            {
+                "name": "Inversiones",
+                "type": "expense"
+            },
+            {
+                "name": "Cripto",
+                "type": "expense"
+            },
+            {
+                "name": "Ropa",
+                "type": "expense"
+            },
+            {
+                "name": "Hogar",
+                "type": "expense"
+            },
+            {
+                "name": "Mascotas",
+                "type": "expense"
+            },
+            {
+                "name": "Viajes",
+                "type": "expense"
+            },
+            {
+                "name": "Seguros",
+                "type": "expense"
+            },
+            {
+                "name": "Impuestos",
+                "type": "expense"
+            },
+            {
+                "name": "Otros Gastos",
+                "type": "expense"
+            }
+        ]
+    }
+}

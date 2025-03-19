@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row justify-content-center align-items-center login-container">
+    <div class="col-md-6">
+        <div class="card cyberpunk-card login-card">
+            <div class="card-body">
+                <h1 class="text-center mb-4 neon-text login-title"><i class="bi bi-cpu pulse-icon"></i> CyberFinance</h1>
+                
+                <ul class="nav nav-tabs cyber-tabs" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active neon-text" data-bs-toggle="tab" href="#login">Iniciar Sesión</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link neon-text" data-bs-toggle="tab" href="#register">Registrarse</a>
+                    </li>
+                </ul>
+
+                <div class="tab-content mt-4">
+                    <div id="login" class="tab-pane active">
+                        <form action="{{ url_for('login') }}" method="POST" class="login-form">
+                            <div class="mb-3 form-floating">
+                                <input type="text" class="form-control cyber-input" id="login-username" name="username" required>
+                                <label for="login-username" class="form-label">Usuario</label>
+                            </div>
+                            <div class="mb-4 form-floating">
+                                <input type="password" class="form-control cyber-input" id="login-password" name="password" required>
+                                <label for="login-password" class="form-label">Contraseña</label>
+                            </div>
+                            <button type="submit" class="btn btn-cyber btn-lg w-100 login-btn">
+                                <i class="bi bi-unlock"></i> Iniciar Sesión
+                            </button>
+                        </form>
+                    </div>
+
+                    <div id="register" class="tab-pane fade">
+                        <form action="{{ url_for('register') }}" method="POST" class="register-form">
+                            <div class="mb-3 form-floating">
+                                <input type="text" class="form-control cyber-input" id="register-name" name="name" required>
+                                <label for="register-name" class="form-label">Nombre Completo</label>
+                            </div>
+                            <div class="mb-3 form-floating">
+                                <input type="email" class="form-control cyber-input" id="register-email" name="email" required>
+                                <label for="register-email" class="form-label">Correo Electrónico</label>
+                            </div>
+                            <div class="mb-3 form-floating">
+                                <input type="text" class="form-control cyber-input" id="register-username" name="username" required>
+                                <label for="register-username" class="form-label">Usuario</label>
+                            </div>
+                            <div class="mb-4 form-floating">
+                                <input type="password" class="form-control cyber-input" id="register-password" name="password" required maxlength="6">
+                                <label for="register-password" class="form-label">Contraseña (máx. 6 caracteres)</label>
+                            </div>
+                            <button type="submit" class="btn btn-cyber btn-lg w-100 register-btn">
+                                <i class="bi bi-person-plus"></i> Crear Cuenta
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="login-features mt-4">
+                    <div class="feature-item">
+                        <i class="bi bi-shield-check"></i>
+                        <span>Seguridad de datos</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="bi bi-graph-up"></i>
+                        <span>Analiza tus finanzas</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="bi bi-currency-bitcoin"></i>
+                        <span>Inversiones en cripto</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/login.js') }}"></script>
+{% endblock %}

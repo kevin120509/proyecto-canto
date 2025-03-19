@@ -1,0 +1,920 @@
+/* Estilos para las tablas y transacciones */
+.table th, .table td {
+    vertical-align: middle;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(0, 151, 251, 0.1);
+    transition: background-color 0.3s;
+}
+
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: #aaa;
+}
+
+/* Estilo para badges (etiquetas) */
+.badge {
+    font-size: 0.85rem;
+    padding: 0.35rem 0.65rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Mejoras en tarjetas cyber */
+.cyberpunk-card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(0, 151, 251, 0.5);
+    box-shadow: 0 0 15px rgba(0, 151, 251, 0.3);
+    transition: all 0.3s ease;
+}
+
+.cyberpunk-card:hover {
+    border-color: rgba(0, 151, 251, 0.8);
+    box-shadow: 0 0 20px rgba(0, 151, 251, 0.5);
+}
+
+.cyberpunk-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #00f0ff, #0097fb, #f600ff);
+    z-index: 1;
+}
+
+/* Animación de carga para cuando no hay datos */
+@keyframes pulse {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
+}
+
+.empty-state i {
+    animation: pulse 2s infinite;
+}
+
+:root {
+    --cyber-neon: #0ff;
+    --cyber-pink: #ff2a6d;
+    --cyber-blue: #05d9e8;
+    --cyber-purple: #7700ff;
+    --cyber-bg: #1a1a1a;
+}
+
+body {
+    background-color: var(--cyber-bg);
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.cyberpunk-nav {
+    background: linear-gradient(180deg, var(--cyber-bg), transparent);
+    border-bottom: 2px solid var(--cyber-neon);
+}
+
+.neon-text {
+    color: var(--cyber-neon);
+    text-shadow: 0 0 5px var(--cyber-neon), 0 0 10px var(--cyber-neon);
+}
+
+.cyberpunk-card {
+    background: var(--cyber-bg);
+    border: 2px solid var(--cyber-neon);
+    box-shadow: 0 0 15px var(--cyber-neon);
+    border-radius: 0;
+}
+
+.cyber-input {
+    background-color: rgba(5, 217, 232, 0.1);
+    border: 1px solid var(--cyber-neon);
+    color: #fff;
+}
+
+.cyber-input:focus {
+    background-color: rgba(5, 217, 232, 0.2);
+    border-color: var(--cyber-pink);
+    box-shadow: 0 0 10px var(--cyber-pink);
+    color: #fff;
+}
+
+.btn-cyber {
+    background: var(--cyber-pink);
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-cyber:hover {
+    background: var(--cyber-purple);
+    color: #fff;
+    box-shadow: 0 0 15px var(--cyber-purple);
+}
+
+.alert-cyber {
+    background: rgba(5, 217, 232, 0.1);
+    border: 1px solid var(--cyber-neon);
+    color: var(--cyber-neon);
+}
+
+.cyber-tabs .nav-link {
+    color: var(--cyber-neon);
+    border: none;
+    position: relative;
+}
+
+.cyber-tabs .nav-link.active {
+    background: transparent;
+    color: var(--cyber-pink);
+    border-bottom: 2px solid var(--cyber-pink);
+}
+
+.table {
+    border: 1px solid var(--cyber-neon);
+}
+
+.table th {
+    color: var(--cyber-neon);
+    border-bottom: 2px solid var(--cyber-neon);
+}
+
+.table td {
+    color: #fff;
+    border-bottom: 1px solid rgba(5, 217, 232, 0.3);
+}
+
+.card-title {
+    color: var(--cyber-pink);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.navbar-brand i {
+    color: var(--cyber-neon);
+    margin-right: 0.5rem;
+}
+
+/* Efectos de hover */
+.nav-link:hover {
+    color: var(--cyber-pink);
+    text-shadow: 0 0 5px var(--cyber-pink);
+}
+
+/* Animaciones */
+@keyframes neon-flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        text-shadow: 0 0 5px var(--cyber-neon), 0 0 10px var(--cyber-neon);
+    }
+    20%, 24%, 55% {
+        text-shadow: none;
+    }
+}
+
+.neon-text:hover {
+    animation: neon-flicker 2s infinite;
+}
+
+.card {
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.nav-tabs .nav-link {
+    border-radius: 0;
+    padding: 1rem;
+}
+
+.table th {
+    border-top: none;
+}
+
+.alert {
+    border-radius: 10px;
+}
+
+.form-control, .form-select {
+    background-color: var(--bs-dark);
+    border-color: var(--bs-gray-700);
+    color: var(--bs-light);
+}
+
+.form-control:focus, .form-select:focus {
+    background-color: var(--bs-dark);
+    border-color: var(--bs-primary);
+    color: var(--bs-light);
+}
+
+.card-title {
+    color: var(--bs-info);
+    margin-bottom: 1.5rem;
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+.navbar {
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand i {
+    margin-right: 0.5rem;
+}
+
+.cyber-stat-card {
+    background-color: rgba(5, 217, 232, 0.1);
+    border: 1px solid var(--cyber-neon);
+    color: #fff;
+    text-shadow: 0 0 3px #000;
+}
+
+.cyber-stat-card h3, .cyber-stat-card h6 {
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+}
+
+.bg-success.cyber-stat-card {
+    background: linear-gradient(45deg, rgba(40, 167, 69, 0.8), rgba(40, 167, 69, 0.6)) !important;
+}
+
+.bg-danger.cyber-stat-card {
+    background: linear-gradient(45deg, rgba(220, 53, 69, 0.8), rgba(220, 53, 69, 0.6)) !important;
+}
+
+.bg-info.cyber-stat-card {
+    background: linear-gradient(45deg, rgba(23, 162, 184, 0.8), rgba(23, 162, 184, 0.6)) !important;
+}
+
+.cyber-dropdown {
+    background-color: var(--cyber-bg);
+    border: 1px solid var(--cyber-neon);
+}
+
+.cyber-dropdown .dropdown-item {
+    color: var(--cyber-neon);
+}
+
+.cyber-dropdown .dropdown-item:hover {
+    background-color: rgba(5, 217, 232, 0.2);
+    color: var(--cyber-pink);
+}
+/* Estilos para el Chat y las opciones nuevas */
+.chat-container {
+    height: 350px;
+    overflow-y: auto;
+    border: 1px solid #2a2a2a;
+    background-color: #0a0a0a;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.message {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.user {
+    background-color: #2a2a2a;
+    margin-left: 20%;
+    position: relative;
+}
+
+.assistant {
+    background-color: #1e3a8a;
+    margin-right: 20%;
+    position: relative;
+}
+
+.message-content {
+    color: #fff;
+}
+
+.cyber-modal {
+    background-color: #121212;
+    border: 1px solid #00b3ff;
+    box-shadow: 0 0 15px rgba(0, 179, 255, 0.5);
+}
+
+.cyber-dropdown {
+    background-color: #121212;
+    border: 1px solid #00b3ff;
+}
+
+.cyber-dropdown .dropdown-item {
+    color: #00b3ff;
+}
+
+.cyber-dropdown .dropdown-item:hover {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+.cyber-stat-card {
+    padding: 15px;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+    border: none;
+    border-radius: 5px;
+}
+
+.cyber-stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.cyber-amount {
+    font-size: 2.2rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
+
+.info-box {
+    background-color: rgba(0,179,255,0.1);
+    border-left: 3px solid #00b3ff;
+    padding: 10px;
+    border-radius: 0 5px 5px 0;
+}
+
+.neon-text {
+    color: #00b3ff;
+    text-shadow: 0 0 5px rgba(0,179,255,0.7);
+}
+
+.table {
+    color: #ddd;
+    background-color: #121212;
+}
+
+.table-dark {
+    background-color: #1a1a1a;
+}
+
+.table tbody tr {
+    background-color: #1e1e1e;
+    color: #fff;
+}
+
+.table tbody tr:hover {
+    background-color: rgba(0,179,255,0.2);
+}
+
+.table td {
+    color: #fff;
+    border-color: #333;
+}
+
+.empty-state {
+    color: #00b3ff;
+    text-align: center;
+    padding: 20px;
+    background-color: #121212;
+    border-radius: 5px;
+    border: 1px dashed #333;
+}
+
+.cyber-advice {
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    border-left: 3px solid #00ff9d;
+}
+
+.advice-header {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #00ff9d;
+}
+
+.advice-content {
+    color: #ddd;
+}
+
+.advice-item {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #333;
+}
+
+.advice-item:last-child {
+    border-bottom: none;
+}
+
+.btn-cyber {
+    background: linear-gradient(45deg, #0088ff, #00b3ff);
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 8px 16px;
+    box-shadow: 0 0 5px rgba(0,179,255,0.5);
+    transition: all 0.3s;
+}
+
+.btn-cyber:hover {
+    background: linear-gradient(45deg, #00b3ff, #0088ff);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0,179,255,0.7);
+    color: white;
+}
+
+.cyber-input {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    color: #ddd;
+    padding: 10px;
+}
+
+.cyber-input:focus {
+    border-color: #00b3ff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 179, 255, 0.25);
+    background-color: #1a1a1a;
+    color: #fff;
+}
+/* Responsive Design Improvements */
+@media (max-width: 768px) {
+    .cyberpunk-card {
+        margin-bottom: 1rem;
+    }
+
+    .table-responsive {
+        margin-bottom: 1rem;
+        border: 0;
+    }
+
+    .cyber-stat-card {
+        margin-bottom: 1rem;
+    }
+
+    .btn-cyber {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    .modal-dialog {
+        margin: 0.5rem;
+    }
+
+    .cyber-modal {
+        padding: 1rem;
+    }
+
+    .card-body {
+        padding: 1rem;
+    }
+
+    .table td, .table th {
+        padding: 0.5rem;
+    }
+
+    .mobile-collapsible {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Mobile-friendly improvements */
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 1.5rem;
+    }
+
+    .btn {
+        padding: 12px 20px;
+        font-size: 16px;
+        min-height: 48px;
+    }
+
+    .form-control, .form-select {
+        height: 48px;
+        font-size: 16px;
+    }
+
+    .table td, .table th {
+        padding: 12px 8px;
+        font-size: 14px;
+    }
+
+    .card-body {
+        padding: 1.25rem;
+    }
+
+    .cyber-stat-card {
+        margin-bottom: 1rem;
+    }
+
+    .collapsible-section {
+        margin-bottom: 1rem;
+    }
+
+    .collapse-header {
+        padding: 1rem;
+        background: rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .collapse-content {
+        padding: 1rem;
+    }
+}
+
+.btn-floating {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 1000;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #0088ff, #00b3ff);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    color: white;
+    font-size: 24px;
+    transition: transform 0.2s;
+}
+
+.btn-floating:hover {
+    transform: scale(1.1);
+}
+
+.mobile-section-toggle {
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+    margin-bottom: 10px;
+    background: rgba(0, 0, 0, 0.2);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-menu {
+        display: block;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Estilos para las gráficas y reportes financieros */
+.crypto-dashboard {
+    padding: 15px 0;
+}
+
+.crypto-dashboard .card {
+    border: 1px solid rgba(0, 151, 251, 0.6);
+    box-shadow: 0 0 10px rgba(0, 151, 251, 0.3);
+    transition: all 0.3s;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.crypto-dashboard .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 151, 251, 0.5);
+}
+
+.crypto-dashboard .card-title {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(0, 151, 251, 0.3);
+    padding-bottom: 10px;
+}
+
+.crypto-dashboard .table {
+    background-color: transparent;
+    margin-bottom: 0;
+}
+
+.crypto-dashboard .table th {
+    border-top: none;
+    color: #00b3ff;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 8px;
+}
+
+.crypto-dashboard .table td {
+    padding: 8px;
+    font-size: 0.9rem;
+    vertical-align: middle;
+}
+
+.crypto-performance {
+    padding: 10px 0;
+}
+
+.crypto-performance .progress {
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+.crypto-performance .progress-bar {
+    border-radius: 4px;
+}
+
+.crypto-dashboard .list-group-item {
+    background-color: transparent;
+    color: #ddd;
+    padding: 12px 8px;
+    font-size: 0.9rem;
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.crypto-dashboard .list-group-item:first-child {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.crypto-dashboard .list-group-item:last-child {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom: none;
+}
+
+/* Estilos mejorados para los modales */
+.cyber-modal {
+    background-color: rgba(18, 18, 24, 0.95);
+    border: 1px solid #00b3ff;
+    box-shadow: 0 0 20px rgba(0, 179, 255, 0.5);
+    border-radius: 10px;
+}
+
+.cyber-modal .modal-header {
+    border-bottom: 1px solid rgba(0, 179, 255, 0.3);
+    padding: 1rem 1.5rem;
+}
+
+.cyber-modal .modal-title {
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cyber-modal .modal-title i {
+    margin-right: 10px;
+    color: #00b3ff;
+}
+
+.cyber-modal .modal-body {
+    padding: 1.5rem;
+}
+
+.cyber-modal .btn-close {
+    color: #fff;
+    text-shadow: none;
+    opacity: 0.8;
+}
+
+.cyber-modal .btn-close:hover {
+    opacity: 1;
+}
+
+/* Estilos para administración de datos */
+.info-box {
+    background-color: rgba(0, 179, 255, 0.05);
+    border-radius: 5px;
+    padding: 12px;
+    margin-top: 15px;
+}
+
+.info-box h6 {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+
+.info-box p {
+    font-size: 0.85rem;
+    margin-bottom: 0;
+    color: #bbb;
+}
+
+/* Mejoras para gestión de categorías */
+#categories-table .btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+}
+
+.optgroup-header {
+    color: #00b3ff;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 8px 16px;
+    background-color: rgba(0, 179, 255, 0.1);
+}
+
+/* Clases de animación para elementos */
+.crypto-pulse {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 179, 255, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(0, 179, 255, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 179, 255, 0);
+    }
+}
+
+/* Estilos para el formulario de login */
+.login-container {
+    min-height: 90vh;
+    padding: 2rem 0;
+}
+
+.login-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(0, 179, 255, 0.3);
+    transform: translateY(0);
+    transition: all 0.3s ease;
+}
+
+.login-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 40px rgba(0, 179, 255, 0.5);
+}
+
+.login-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.login-title.animate-title {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.pulse-icon {
+    animation: pulse-animation 2s infinite;
+    display: inline-block;
+}
+
+@keyframes pulse-animation {
+    0% {
+        transform: scale(1);
+        text-shadow: 0 0 5px var(--cyber-neon), 0 0 10px var(--cyber-neon);
+    }
+    50% {
+        transform: scale(1.05);
+        text-shadow: 0 0 10px var(--cyber-neon), 0 0 20px var(--cyber-neon), 0 0 30px var(--cyber-neon);
+    }
+    100% {
+        transform: scale(1);
+        text-shadow: 0 0 5px var(--cyber-neon), 0 0 10px var(--cyber-neon);
+    }
+}
+
+.form-floating > .cyber-input {
+    height: calc(3.5rem + 2px);
+    padding: 1.5rem 0.75rem 0.75rem;
+    color: white;
+}
+
+.form-floating > label {
+    padding: 0.75rem;
+    color: #aaa;
+}
+
+.form-floating > .cyber-input:focus ~ label,
+.form-floating > .cyber-input:not(:placeholder-shown) ~ label {
+    opacity: 0.65;
+    transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
+    color: var(--cyber-neon);
+}
+
+.input-focus {
+    box-shadow: 0 0 0 0.25rem rgba(0, 179, 255, 0.25);
+}
+
+.error {
+    border-color: #dc3545 !important;
+    box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25) !important;
+}
+
+.invalid-feedback {
+    display: block;
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+.login-btn, .register-btn {
+    height: 56px;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover, .register-btn:hover {
+    background: linear-gradient(45deg, #0088ff, #7700ff);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 179, 255, 0.4);
+}
+
+.login-features {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.feature-item.animate-feature {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.feature-item i {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--cyber-neon);
+}
+
+.feature-item span {
+    font-size: 0.85rem;
+    color: #ccc;
+}
+
+.shake-error {
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    10% { transform: translateX(-10px); }
+    20% { transform: translateX(10px); }
+    30% { transform: translateX(-10px); }
+    40% { transform: translateX(10px); }
+    50% { transform: translateX(-5px); }
+    60% { transform: translateX(5px); }
+    70% { transform: translateX(-3px); }
+    80% { transform: translateX(3px); }
+    90% { transform: translateX(-1px); }
+    100% { transform: translateX(0); }
+}
+
+@media (max-width: 576px) {
+    .login-title {
+        font-size: 1.8rem;
+    }
+    
+    .login-features {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .feature-item {
+        margin-bottom: 1rem;
+    }
+    
+    .login-card {
+        margin: 0 1rem;
+    }
+}
